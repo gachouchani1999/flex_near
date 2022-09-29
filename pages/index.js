@@ -44,7 +44,6 @@ export default function Home() {
               alignSelf={{ lg: "flex-start" }}
               textAlign={{ base: "center", lg: "left" }}
             >
-              <NearLogIn />
               Buy Now. Pay Later.
             </Text>
             <Text
