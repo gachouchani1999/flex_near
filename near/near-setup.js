@@ -6,7 +6,6 @@ import {
   utils as nearUtils
 } from "near-api-js";
 
-// export const CONTRACT_ID = "harmonicnft.calvintorra.testnet";
 const NETWORK = process.env.NEXT_PUBLIC_NETWORK;
 const NETWORK_URL_BASE =
   process.env.NEXT_PUBLIC_NETWORK === "mainnet"
@@ -66,11 +65,10 @@ export const callFunction = async ({
   deposit = "0"
 }) => {
   const result = await wallet.account().functionCall({
-    contractId: contractID, // NFT CONTRACT ID
+    contractId: contractID,
     methodName: functionName,
     args: args,
-    // attachedDeposit: utils.format.parseNearAmount("1")
-    attachedDeposit: utils.format.parseNearAmount("0.01") // 4cents works
+    attachedDeposit: utils.format.parseNearAmount("0.01")
   });
 
   return result;
